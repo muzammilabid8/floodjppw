@@ -8,8 +8,8 @@ st.title("Search Your Record")
 
 # Message
 st.write("### Pray for Flood Affecties")
-st.write(" #### This list contains the people from Jalalpur Pirwala whose cards have been received in the camp or the Fund is approved. Missing names will be added daily. If your name appears under “PLRA  Not Verified,” please visit the AC office to check whether your application has been rejected or not.")
-st.write("## Enter CNIC without hyphen - like(3630111111111) and phone number without 0 like (3000900786)")
+st.write(" This list contains the people from Jalalpur Pirwala whose cards have been received in the camp or the Fund is approved. Missing names will be added daily. If your name appears under “PLRA  Not Verified,” please visit the AC office to check whether your application has been rejected or not.")
+st.write("#### Enter CNIC without hyphen - like(3630111111111) and phone number without 0 like (3000900786)")
 query = st.text_input("Enter Name, CNIC, or Phone")
 search_btn = st.button("Search")
 
@@ -25,3 +25,4 @@ if search_btn:
             st.write(results)
         else:
             st.error("No record found.")
+
