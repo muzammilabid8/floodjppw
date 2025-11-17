@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Load data
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data (1).csv")
 
 st.title("Search Your Record")
 
@@ -16,3 +16,4 @@ if query:
         st.write(results)
     else:
         st.write("Sorry! No record found.")
+
