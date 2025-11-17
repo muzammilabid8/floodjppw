@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Load data
-df = pd.read_csv("data (1).csv")
+df = pd.read_csv("data_clean.csv")
 st.title("Search Your Record")
 st.write("#### Enter CNIC without hyphen - like(3630111111111) and phone number without 0 like (3000900786)")
 
@@ -26,6 +26,7 @@ if search_btn:
             st.write(results)
         else:
             st.error("No record found.")
+
 
 
 
