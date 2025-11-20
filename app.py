@@ -8,7 +8,7 @@ st.write("##### اپنا شناختی کارڈ نمبر بغیر ہائفن کے
 # GitHub folder raw URLs
 github_files = [
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data_clean.csv",
-    "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data%(1).csv",
+    "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data%20%281%29.csv",
 ]
 
 # Load all CSVs into a single DataFrame
@@ -44,6 +44,7 @@ if search_btn:
             st.write(results)
         else:
             st.error("اس وقت کوئی ریکارڈ نہیں ملا۔ انتظار کریں، ان شاء اللہ آپ کا فنڈ منظور ہو جائے گا۔")
+
 
 
 
