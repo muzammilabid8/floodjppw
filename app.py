@@ -1,21 +1,36 @@
 import pandas as pd
 import streamlit as st
-st.write( "## بِسْمِ اللّٰه الرَّحْمٰنِ الرَّحِيْمِ")
-# Load data
-df = pd.read_csv("combined20112025.csv")
+
+st.write("## بِسْمِ اللّٰه الرَّحْمٰنِ الرَّحِيْمِ")
 st.write("## اپنا ریکارڈ تلاش کریں")
 st.write("##### اپنا شناختی کارڈ نمبر بغیر ہائفن کے لکھیں (مثلاً 3630111111111) اور فون نمبر بغیر 0 کے لکھیں (مثلاً 3000900786)")
 
+# GitHub folder raw URLs
+github_files = [
+    "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data_clean.csv",
+]
 
+# Load all CSVs into a single DataFrame
+df_list = []
+for file_url in github_files:
+    try:
+        temp_df = pd.read_csv(file_url)
+        temp_df['source_file'] = file_url.split('/')[-1]  # Optional: track source file
+        df_list.append(temp_df)
+    except Exception as e:
+        st.warning(f"Could not load {file_url}: {e}")
+
+df = pd.concat(df_list, ignore_index=True)
+
+# Search input
 query = st.text_input("Enter Name, CNIC, or Phone")
 search_btn = st.button("Search")
 
-# Messagest.write("### سیلاب متاثرین کے لیے دعا کریں")
 st.write("یہ فہرست جلالپور پیر والا کے لوگوں پر مشتمل ہے جن کے کارڈ کیمپ میں موصول ہو چکے ہیں یا فنڈ منظور ہو چکا ہے۔ نئے نام روزانہ شامل کیے جائیں گے۔")
 st.write("PLRA Not Verified اگر آپ کا نام  ")
 st.write(" کے تحت ظاہر ہوتا ہے تو براہ کرم اے سی آفس جائیں تاکہ یہ جان سکیں کہ آیا آپ کی درخواست قبول ہوئی ہے یا نہیں۔ ")
 
-
+# Search functionality
 if search_btn:
     if query.strip() == "":
         st.warning("Please type something to search.")
@@ -28,8 +43,3 @@ if search_btn:
             st.write(results)
         else:
             st.error("اس وقت کوئی ریکارڈ نہیں ملا۔ انتظار کریں، ان شاء اللہ آپ کا فنڈ منظور ہو جائے گا۔")
-
-
-
-
-
