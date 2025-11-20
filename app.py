@@ -1,17 +1,18 @@
 import pandas as pd
 import streamlit as st
-
+st.write( "## بِسْمِ اللّٰه الرَّحْمٰنِ الرَّحِيْمِ")
 # Load data
-df = pd.read_csv("data_clean.csv")
-st.title("Search Your Record")
-st.write("#### Enter CNIC without hyphen - like(3630111111111) and phone number without 0 like (3000900786)")
+df = pd.read_csv("combined20112025.csv")
+st.write("## اپنا ریکارڈ تلاش کریں")
+st.write("##### اپنا شناختی کارڈ نمبر بغیر ہائفن کے لکھیں (مثلاً 3630111111111) اور فون نمبر بغیر 0 کے لکھیں (مثلاً 3000900786)")
+
 
 query = st.text_input("Enter Name, CNIC, or Phone")
 search_btn = st.button("Search")
 
 # Message
-st.write("### Pray for Flood Affecties")
-st.write(" This list contains the people from Jalalpur Pirwala whose cards have been received in the camp or the Fund is approved. Missing names will be added daily. If your name appears under “PLRA  Not Verified,” please visit the AC office to check whether your application has been rejected or not.")
+st.write("### سیلاب متاثرین کے لیے دعا کریں")
+st.write("یہ فہرست جلالپور پیروالا کے اُن لوگوں پر مشتمل ہے جن کے کارڈ کیمپ میں موصول ہو چکے ہیں یا جن کا فنڈ منظور ہو چکا ہے۔ گمشدہ نام روزانہ شامل کیے جائیں گے۔ اگر آپ کا نام 'PLRA Not Verified' کے تحت آتا ہے تو براہِ کرم اے سی آفس جائیں اور تصدیق کریں کہ آپ کی درخواست منظور ہوئی ہے یا مسترد۔")
 
 
 if search_btn:
@@ -26,6 +27,7 @@ if search_btn:
             st.write(results)
         else:
             st.error("No record found.")
+
 
 
 
