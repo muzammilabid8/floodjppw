@@ -10,6 +10,7 @@ github_files = [
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data_clean.csv",
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data20.csv",
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/data21.csv",
+    "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/kin.csv",
 ]
 
 # Load all CSVs into a single DataFrame
@@ -29,8 +30,8 @@ query = st.text_input("Enter Name, CNIC, or Phone")
 search_btn = st.button("Search")
 
 st.write("یہ فہرست جلالپور پیر والا کے لوگوں پر مشتمل ہے جن کے کارڈ کیمپ میں موصول ہو چکے ہیں یا فنڈ منظور ہو چکا ہے۔ نئے نام روزانہ شامل کیے جائیں گے۔")
-st.write("PLRA Not Verified اگر آپ کا نام  ")
-st.write(" کے تحت ظاہر ہوتا ہے تو براہ کرم اے سی آفس جائیں تاکہ یہ جان سکیں کہ آیا آپ کی درخواست قبول ہوئی ہے یا نہیں۔ ")
+st.write(" کے تحت ظاہر ہوتا ہے تو براہ کرم اے سی آفس جائیں تاکہ یہ جان سکیں کہ آیا آپ کی درخواست قبول ہوئی ہے یا نہیں۔  PLRA Not Verified اگر آپ کا نام ")
+st.write("میں آ جائے تو اس کا مطلب ہے کہ آپ کی درخواست زمین کی وراثتی مسائل کی وجہ سے مسترد ہو گئی ہے۔ kin.csv اگر آپ کا نام")
 
 # Search functionality
 if search_btn:
@@ -45,6 +46,7 @@ if search_btn:
             st.write(results)
         else:
             st.error("اس وقت کوئی ریکارڈ نہیں ملا۔ انتظار کریں، ان شاء اللہ آپ کا فنڈ منظور ہو جائے گا۔")
+
 
 
 
