@@ -50,7 +50,7 @@ if search_btn:
         loading_html = """
         <div style="text-align:center; margin-top:20px;">
             <div class="loader"></div>
-            <h2 style="color:#444; font-size:26px; margin-top:20px;">
+            <h2 style="color:#444; font-size:20px; margin-top:20px;">
                  انتظار کریں، آپ کا ریکارڈ تلاش کیا جا رہا ہے...
             </h2>
         </div>
@@ -60,8 +60,8 @@ if search_btn:
           border: 12px solid #f3f3f3;
           border-top: 12px solid #3498db;
           border-radius: 50%;
-          width: 80px;
-          height: 80px;
+          width: 60px;
+          height: 60px;
           animation: spin 1s linear infinite;
           margin: auto;
         }
@@ -95,3 +95,4 @@ st.write("kin.csv")
 st.write("اور")
 st.write("plra not verified")
 st.write("میں اگر آپ کا نام آ جائے تو اس کا مطلب ہے کہ آپ کی درخواست زمین کی وراثتی مسائل کی وجہ سے مسترد ہو گئی ہے۔ پٹواری سے رابطہ کریں اور وراثت منتقل کریں۔")
+
