@@ -29,6 +29,8 @@ github_files = [
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/dec18.csv",
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/dec22.csv",
     "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/dec23.csv",
+    "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/dec24.csv",
+    "https://raw.githubusercontent.com/muzammilabid8/floodjppw/main/dec241.csv",
     
 ]
 
@@ -103,6 +105,7 @@ st.write("kin.csv")
 st.write("اور")
 st.write("plra not verified")
 st.write("میں اگر آپ کا نام آ جائے تو اس کا مطلب ہے کہ آپ کی درخواست زمین کی وراثتی مسائل کی وجہ سے مسترد ہو گئی ہے۔ پٹواری سے رابطہ کریں اور وراثت منتقل کریں۔")
+
 
 
 
